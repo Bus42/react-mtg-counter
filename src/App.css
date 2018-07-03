@@ -9,7 +9,6 @@
   transition: all 0.5s ease;
   overflow: hidden;
   top: -360px;
-  cursor: s-resize;
 }
 
 .menuDiv-open {
@@ -18,7 +17,6 @@
   position: absolute;
   transition: all 0.5s ease;
   top: 0;
-  cursor: n-resize;
 }
 
 #playerDiv {
@@ -30,8 +28,10 @@
   top: 0;
   right: 0;
   padding: 12px 10px;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.ListGroup-wrapper {
-  padding-top: 40px;
+.menuDiv-wrapper {
+  margin-top: 40px;
 }
