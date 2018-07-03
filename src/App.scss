@@ -1,10 +1,11 @@
+#menuDiv {
+  z-index: 1;
+}
 .menuDiv-closed {
   height: 400px;
   width: 100vw;
   position: absolute;
   transition: all .5s ease;
-  background-color: black;
-  opacity: .7;
   overflow: hidden;
   top: -360px;
   cursor: s-resize;
@@ -15,8 +16,6 @@
   width: 100vw;
   position: absolute;
   transition: all .5s ease;
-  background-color: black;
-  opacity: .9;
   top: 0;
   cursor: n-resize;
 }
@@ -28,4 +27,7 @@
   top: 0;
   right: 0;
   padding: 12px 10px;
+}
+.ListGroup-wrapper {
+  padding-top: 40px;
 }
