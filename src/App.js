@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       isActive: false,
-      playerCount: 2
+      PlayerCount: 2
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -23,7 +23,7 @@ class App extends Component {
 
   renderPlayers() {
     let playerList = [];
-    for (let i = 0; i < this.state.playerCount; i++) {
+    for (let i = 0; i < this.state.PlayerCount; i++) {
       playerList.push(<Player key={i} />);
     }
     return playerList;
