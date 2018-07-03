@@ -2,28 +2,36 @@ import React, { Component } from 'react';
 // eslint-disable-next-line
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import './App.css';
+import Menu from './components/Menu';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = {
+      isActive: false,
+      life: 20,
+      name: 'player',
+      isWinner: false,
+      isDead: false
+    };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    console.log(this.state.active ? 'active' : 'not active');
     this.setState(prevState => ({
-      active: !prevState.active
+      isActive: !prevState.isActive
     }));
   }
 
   render() {
     return (
       <div
-        id="testDiv"
-        className={!this.state.active ? 'testDiv-closed' : 'testDiv-open'}
+        id="menuDiv"
+        className={!this.state.isActive ? 'menuDiv-closed' : 'menuDiv-open'}
         onClick={this.handleClick}
-      />
+      >
+        <Menu />
+      </div>
     );
   }
 }

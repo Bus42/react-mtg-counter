@@ -1,4 +1,4 @@
-.testDiv-closed {
+.menuDiv-closed {
   height: 400px;
   width: 100vw;
   position: absolute;
@@ -10,7 +10,7 @@
   cursor: s-resize;
 }
 
-.testDiv-open {
+.menuDiv-open {
   height: 400px;
   width: 100vw;
   position: absolute;
