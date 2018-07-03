@@ -8,6 +8,7 @@
   overflow: hidden;
   top: -360px;
   cursor: s-resize;
+  
 }
 .menuDiv-open {
   height: 400px;
@@ -18,4 +19,13 @@
   opacity: .9;
   top: 0;
   cursor: n-resize;
+}
+#playerDiv {
+  margin-top: 40px;
+}
+#menu-control {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 12px 10px;
 }

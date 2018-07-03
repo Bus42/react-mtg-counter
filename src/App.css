@@ -20,3 +20,14 @@
   top: 0;
   cursor: n-resize;
 }
+
+#playerDiv {
+  margin-top: 40px;
+}
+
+#menu-control {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 12px 10px;
+}
