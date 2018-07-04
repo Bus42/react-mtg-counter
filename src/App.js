@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-// eslint-disable-next-line
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+//import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import './App.css';
 import Menu from './components/Menu';
 import Player from './components/Player';
+import PlayerCountForm from './components/PlayerCountForm';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isActive: false,
-      PlayerCount: 2
+      playerCount: 2,
+      showModal: false
     };
     this.handleClick = this.handleClick.bind(this);
+    this.setState = this.setState.bind(this);
   }
 
   handleClick() {
@@ -27,6 +29,27 @@ class App extends Component {
       playerList.push(<Player key={i} />);
     }
     return playerList;
+  }
+
+  showPlayerForm() {
+    console.log('showPlayerForm() called');
+    this.setState({
+      showModal: true
+    });
+  }
+
+  updatePlayerCount(x) {
+    console.log(`updatePlayerCount(${x}) called`);
+    this.setState({
+      playerCount: { x }
+    });
+  }
+
+  close() {
+    console.log('close() called');
+    this.setState({
+      showModal: false
+    });
   }
 
   render() {
@@ -45,11 +68,15 @@ class App extends Component {
             }
             onClick={this.handleClick}
           />
-          <Menu />
+          <Menu showPlayerForm={this.showPlayerForm} />
         </div>
         <div id="playerDiv" className="text-center">
           {this.renderPlayers()}
         </div>
+        <PlayerCountForm
+          updatePlayerCount={this.updatePlayerCount}
+          showModal={this.state.showModal}
+        />
       </div>
     );
   }
